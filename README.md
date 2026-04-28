@@ -1,4 +1,4 @@
-# PNGTube Overlay
+# Simple audio PNG Overlay
 
 A lightweight always-on-top desktop overlay that animates a PNG character based on an app's audio activity. Built for use during streams or screen shares.
 
