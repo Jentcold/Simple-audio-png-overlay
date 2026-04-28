@@ -7,10 +7,10 @@ import win32gui
 import audioengine
 
 
-# Define window 
+# Define window ( You may configure this ) 
 WIDTH, HEIGHT = 250, 250
 FPS = 30
-CHROMA_KEY = (255, 0, 255)
+CHROMA_KEY = (0, 255, 0)
 
 # Transparency function 
 def make_transparent(hwnd, chroma_key):
@@ -35,10 +35,11 @@ make_transparent(hwnd,CHROMA_KEY)
 idle_img = pygame.image.load("assets/idle.png").convert_alpha()
 talk_img = pygame.image.load("assets/talk.png").convert_alpha()
 
+# I recommend prescaling your image and removing this scaling as it is not exactly the best 
 idle_img = pygame.transform.scale(idle_img, (WIDTH, HEIGHT))
 talk_img = pygame.transform.scale(talk_img, (WIDTH, HEIGHT))
 
-# Get audio session 
+# Get audio session ( Configure this for the correct app audio session )
 session = audioengine.get_session("Discord.exe")
 
 # Loop definitions (for dragging and the window loop itself)
