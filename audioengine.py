@@ -14,5 +14,3 @@ def talk_check(session):
     peak = max(peak, meter.GetPeakValue())
     print(f"{peak:.5f}",end='\r')
     return float(f"{peak:.5f}")
-
-get_session("Discord.exe")
